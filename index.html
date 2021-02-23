@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Tic tac toe - ELAN</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media_style.css" />
+  </head>
+  <body>
+    <h1>Pokemon Tic Tac Toe</h1>
+
+    <!-- select box -->
+    <div class="select-box">
+      <h2 class="instruction">Choose your pokemon !</h2>
+      <div class="options">
+        <button class="kyogrePlayer">Kyogre</button>
+        <button class="groudonPlayer">Groudon</button>
+      </div>
+    </div>
+
+    <!-- playboard -->
+    <div class="game">
+      <!-- message container -->
+      <div class="messageContainer">
+        <p id="message"></p>
+      </div>
+      <table>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <div id="" class="groudonScore"><h3>Groudon :</h3></div>
+      <div id class="kyogreScore"><h3>Kyogre :</h3></div>
+      <a href="" id="reset" class="myButton"
+        >Play again !
+        <img class="pokeball" src="./img/pokeball.png" alt="pokeball" />
+      </a>
+    </div>
+    <figure class="pokemon1">
+      <img src="./img/kyogre.png" alt="image d'un pokemon" />
+    </figure>
+    <figure class="pokemon2">
+      <img src="./img/groudon.png" alt="image d'un pokemon" />
+    </figure>
+    <script src="app.js"></script>
+  </body>
+</html>

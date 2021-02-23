@@ -1,0 +1,217 @@
+html {
+  overflow: hidden;
+}
+* {
+  font-family: "RocknRoll One", sans-serif;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  vertical-align: top;
+}
+body {
+  /* background-color: rgba(96, 193, 231, 0.616); */
+  background-image: url(../img/battleground.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+h1 {
+  margin-top: 10px;
+  font-size: 2.4rem;
+  color: rgb(238, 217, 98);
+  text-shadow: 2px 2px rgb(35, 112, 175);
+  text-align: center;
+  margin-bottom: 45px;
+}
+.select-box {
+  margin: auto;
+  margin-top: 75px;
+  width: 35%;
+  border: 3px solid rgb(24, 60, 179);
+  background: rgba(255, 255, 255, 0.438);
+  text-align: center;
+  padding: 20px 25px 25px;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  color: rgb(238, 217, 98);
+  text-shadow: 2px 2px rgb(35, 112, 175);
+  transition: all 0.3s ease;
+}
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(0%, -125%) scale(0.9);
+  cursor: none;
+}
+.options {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.options button {
+  width: calc(80% / 2);
+  font-size: 1.2rem;
+  padding: 10px;
+  margin: 4px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3 ease;
+}
+.options .groudonPlayer:hover {
+  background: rgba(255, 73, 73, 0.8);
+  transform: scale(1.1);
+}
+.options .kyogrePlayer:hover {
+  background: rgba(60, 105, 253, 0.8);
+  transform: scale(1.1);
+}
+.game {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(0%, -125%) scale(0.9);
+  cursor: none;
+  transition: all 0.5s ease-in-out;
+}
+.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(0%, -40%) scale(1);
+  cursor: initial;
+}
+.pokemon1 {
+  width: 30%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(400%, -155%);
+  cursor: none;
+  transition: all 0.9s ease-out;
+}
+.pokemon2 {
+  width: 35%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-100%, -165%);
+  cursor: none;
+  transition: all 0.9s ease-out;
+}
+.showPokemon1 {
+  position: absolute;
+  opacity: 1;
+  transform: translate(220%, -155%);
+  cursor: initial;
+}
+.showPokemon2 {
+  position: absolute;
+  opacity: 1;
+  transform: translate(-15%, -150%);
+  cursor: initial;
+}
+.groudonScore,
+.kyogreScore {
+  font-family: "DotGothic16", sans-serif;
+  border: 2px solid gray;
+  border-radius: 25px;
+  background: rgba(155, 155, 155, 0.8);
+  margin: auto;
+  width: 15%;
+  height: auto;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 1.1rem;
+  margin: auto;
+  margin-bottom: 40px;
+}
+.groudonScore {
+  position: absolute;
+  top: 200px;
+  left: 160px;
+}
+.kyogreScore {
+  position: absolute;
+  top: 545px;
+  right: 275px;
+}
+
+.messageContainer {
+  border: 2px solid white;
+  border-radius: 25px;
+  background: rgb(226, 226, 226, 0.3);
+  margin: auto;
+  width: 35%;
+  height: auto;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+/* table style */
+table {
+  margin: auto;
+  border-spacing: 6px;
+}
+td {
+  text-align: center;
+  padding: 5px;
+  width: 110px;
+  height: 110px;
+  background: white;
+  border: 2px solid white;
+  border-radius: 25px;
+  /* font-family: "Font Awesome 5 Free"; */
+  color: rgb(36, 128, 182);
+  text-align: center;
+  font-size: 1.8rem;
+  opacity: 0.8;
+  box-shadow: 8px 5px 5px rgba(253, 71, 71, 0.9);
+}
+td:hover {
+  background: rgb(243, 156, 156);
+}
+
+/* play again button */
+.myButton {
+  box-shadow: 3px 4px 0px 0px #ad152e;
+  background: linear-gradient(to bottom, #ff798f 5%, #e53737 100%);
+  background-color: #ff7996;
+  border-radius: 5px;
+  border: 1px solid #c4334b;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 15%;
+  text-align: center;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #cc5299;
+  margin: auto;
+  margin-top: 50px;
+}
+.myButton:hover {
+  background: linear-gradient(to bottom, #e53740 5%, #ff7984 100%);
+  background-color: #e53754;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+.pokeball {
+  width: 20%;
+}
+.fa-fire-alt {
+  color: rgb(194, 46, 46);
+  opacity: 1;
+}
+.fa-tint {
+  color: rgb(44, 41, 211);
+  opacity: 1;
+}

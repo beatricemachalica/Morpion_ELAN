@@ -1,0 +1,97 @@
+@media screen and (max-device-width: 300px) {
+  body {
+    background-image: none;
+    background: rgb(90, 171, 238);
+  }
+  h1 {
+    font-size: 1.4rem;
+    margin: 20px;
+  }
+  .instructions {
+    display: none;
+  }
+  .messageContainer {
+    color: rgb(54, 54, 54);
+    background: rgba(170, 170, 170, 0.5);
+    width: 100%;
+    margin: 0;
+  }
+  table {
+    margin-top: 30px;
+  }
+  td {
+    border: 2px solid rgb(110, 110, 110);
+  }
+  .groudon {
+    display: none;
+  }
+  .kyogre {
+    display: none;
+  }
+  .myButton {
+    width: 70%;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-device-width: 600px) {
+  body {
+    background-image: none;
+    background: rgb(90, 171, 238);
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 20px;
+  }
+  .instructions {
+    display: none;
+  }
+  .messageContainer {
+    color: rgb(54, 54, 54);
+    background: rgba(170, 170, 170, 0.5);
+    width: 100%;
+    margin: 0;
+  }
+  table {
+    margin-top: 30px;
+  }
+  td {
+    border: 2px solid rgb(110, 110, 110);
+  }
+  .groudon {
+    display: none;
+  }
+  .kyogre {
+    display: none;
+  }
+  .myButton {
+    width: 70%;
+    margin-top: 20px;
+  }
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+  body {
+    background-image: none;
+    background: rgb(90, 171, 238);
+  }
+  .messageContainer {
+    color: rgb(54, 54, 54);
+    background: rgba(170, 170, 170, 0.5);
+    width: 50%;
+  }
+  table {
+    margin-top: 80px;
+  }
+  td {
+    border: 2px solid rgb(110, 110, 110);
+  }
+  .groudon {
+    display: none;
+  }
+  .kyogre {
+    display: none;
+  }
+  .myButton {
+    width: 50%;
+    opacity: 1;
+  }
+}
