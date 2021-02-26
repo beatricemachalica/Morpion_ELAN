@@ -22,24 +22,34 @@ window.onload = () => {
     game.classList.add("show");
     pokemon1.classList.add("showPokemon1");
     pokemon2.classList.add("showPokemon2");
-    var audio1 = document.getElementById("audioKyogre");
-    audio1.volume = 0.2;
-    audio1.play();
+    var audioK = document.getElementById("audioKyogre");
+    audioK.volume = 0.2;
+    audioK.play();
   };
   selectGroudon.onclick = () => {
     selectBox.classList.add("hide");
     game.classList.add("show");
     pokemon1.classList.add("showPokemon1");
     pokemon2.classList.add("showPokemon2");
-    var audio2 = document.getElementById("audioGroudon");
-    audio2.volume = 0.2;
-    audio2.play();
+    var audioG = document.getElementById("audioGroudon");
+    audioG.volume = 0.2;
+    audioG.play();
   };
 };
 
 // message
 let msg = document.getElementById("message");
 msg.innerHTML = "Let's battle !";
+
+// Groudon score
+let scoreG = document.getElementById("pointScoreGroudon");
+scoreG.innerHTML = 10;
+// Groudon score
+let scoreK = document.getElementById("pointScoreKyogre");
+scoreK.innerHTML = 10;
+
+// Hit sound
+var audioHit = document.getElementById("audioHit");
 
 // Cells' array
 let cells = document.getElementsByTagName("td");
@@ -116,10 +126,15 @@ for (let i = 0; i < cells.length; i++) {
       }
 
       if (victory === true) {
-        currentPlayer =
-          currentPlayer === player1
-            ? (msg.innerHTML = "Kyogre has won this turn !")
-            : (msg.innerHTML = "Groudon has won this turn !");
+        if (currentPlayer === player1) {
+          msg.innerHTML = "Kyogre has won this turn !";
+          scoreG.innerHTML--;
+          // hitEffect();
+        } else {
+          msg.innerHTML = "Groudon has won this turn !";
+          scoreK.innerHTML--;
+          // hitEffect();
+        }
       } else if (counter === 9 && victory === false) {
         msg.innerHTML = "Draw !";
       } else {
@@ -130,11 +145,23 @@ for (let i = 0; i < cells.length; i++) {
     }
   });
 }
+
+// function hitEffect() {
+//   audioHit.volume = 0.1;
+//   audioHit.play();
+//   hitPokemon2 = document.getElementByClassName("pokemon2");
+//   hitPokemon2.addClass("blink");
+//   setTimeout(RemoveClass, 3000);
+// }
+
 // reset button
 const reset = () => {
   counter = 0;
   victory = false;
   state = [];
+  msg.innerHTML = "Let's battle !";
+  // revoir cette ligne avec la sélection du pokemon !!!
+  currentPlayer = player1;
   for (let cell of cells) {
     cell.innerHTML = "";
   }

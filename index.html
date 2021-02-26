@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="./css/media_style.css" />
   </head>
   <body>
-    <!-- music bar -->
+    <!-- music battle & hit sound -->
     <audio class="music" controls autoplay>
       <source
         src="./sounds/pokemon-the-origins-mewtwo-battle-theme-recreation-hq.mp3"
@@ -33,6 +33,10 @@
       />
       Your browser does not support the audio element.
     </audio>
+    <audio
+      id="audioHit"
+      src="./sounds/critical-hit-sound-effect-pokemon-emerald.mp3"
+    ></audio>
 
     <!-- title -->
     <h1>Pokemon Tic Tac Toe</h1>
@@ -79,24 +83,31 @@
           <td></td>
         </tr>
       </table>
+      <!-- Groudon Score -->
       <div id="" class="groudonScore">
         <i class="fas fa-fire-alt"></i>
-        <h3>Groudon : 10</h3>
+        <h3>Groudon : <span id="pointScoreGroudon"></span></h3>
         <i class="fas fa-heart"></i>
       </div>
+
+      <!-- Kyogre Score -->
       <div id class="kyogreScore">
         <i class="fas fa-tint"></i>
-        <h3>Kyogre : 10</h3>
+        <h3>Kyogre : <span id="pointScoreKyogre"></span></h3>
         <i class="fas fa-heart"></i>
       </div>
+
+      <!-- reset button -->
       <a href="" id="reset" class="myButton"
-        >Play again !
+        >Next turn !
         <img class="pokeball" src="./img/pokeball.png" alt="pokeball" />
       </a>
     </div>
+    <!-- figure Kyogre -->
     <figure class="pokemon1">
       <img src="./img/kyogre.png" alt="image d'un pokemon" />
     </figure>
+    <!-- figure Groudon -->
     <figure class="pokemon2">
       <img src="./img/groudon.png" alt="image d'un pokemon" />
     </figure>
