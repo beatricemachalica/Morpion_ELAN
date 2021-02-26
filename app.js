@@ -2,6 +2,12 @@
 const player1 = "<i class='fas fa-tint'></i>"; //symbole kyogre
 const player2 = "<i class='fas fa-fire-alt'></i>"; //symbole groudon
 
+let currentPlayer = player1;
+let victory = false;
+let counter = 0;
+let counterParty = 0;
+let counterVictory = 0;
+
 // hide select-box and show playboard
 const selectBox = document.querySelector(".select-box"),
   selectKyogre = selectBox.querySelector(".kyogrePlayer"),
@@ -16,20 +22,20 @@ window.onload = () => {
     game.classList.add("show");
     pokemon1.classList.add("showPokemon1");
     pokemon2.classList.add("showPokemon2");
+    var audio1 = document.getElementById("audioKyogre");
+    audio1.volume = 0.2;
+    audio1.play();
   };
   selectGroudon.onclick = () => {
     selectBox.classList.add("hide");
     game.classList.add("show");
     pokemon1.classList.add("showPokemon1");
     pokemon2.classList.add("showPokemon2");
+    var audio2 = document.getElementById("audioGroudon");
+    audio2.volume = 0.2;
+    audio2.play();
   };
 };
-
-let currentPlayer = player1;
-let victory = false;
-let counter = 0;
-let counterParty = 0;
-let counterVictory = 0;
 
 // message
 let msg = document.getElementById("message");
@@ -112,8 +118,8 @@ for (let i = 0; i < cells.length; i++) {
       if (victory === true) {
         currentPlayer =
           currentPlayer === player1
-            ? (msg.innerHTML = "Kyogre wins !")
-            : (msg.innerHTML = "Groudon wins !");
+            ? (msg.innerHTML = "Kyogre has won this turn !")
+            : (msg.innerHTML = "Groudon has won this turn !");
       } else if (counter === 9 && victory === false) {
         msg.innerHTML = "Draw !";
       } else {

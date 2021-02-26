@@ -25,14 +25,34 @@
     <link rel="stylesheet" href="./css/media_style.css" />
   </head>
   <body>
+    <!-- music bar -->
+    <audio class="music" controls autoplay>
+      <source
+        src="./sounds/pokemon-the-origins-mewtwo-battle-theme-recreation-hq.mp3"
+        type="audio/mpeg"
+      />
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- title -->
     <h1>Pokemon Tic Tac Toe</h1>
 
     <!-- select box -->
     <div class="select-box">
       <h2 class="instruction">Choose your pokemon !</h2>
       <div class="options">
-        <button class="kyogrePlayer">Kyogre</button>
-        <button class="groudonPlayer">Groudon</button>
+        <button type="button" value="PLAY" class="kyogrePlayer">Kyogre</button>
+        <audio
+          id="audioKyogre"
+          src="./sounds/pokemon-cries-382-kyogre.mp3"
+        ></audio>
+        <button type="button" value="PLAY" class="groudonPlayer">
+          Groudon
+        </button>
+        <audio
+          id="audioGroudon"
+          src="./sounds/pokemon-cries-383-groudon.mp3"
+        ></audio>
       </div>
     </div>
 
@@ -61,11 +81,13 @@
       </table>
       <div id="" class="groudonScore">
         <i class="fas fa-fire-alt"></i>
-        <h3>Groudon :</h3>
+        <h3>Groudon : 10</h3>
+        <i class="fas fa-heart"></i>
       </div>
       <div id class="kyogreScore">
         <i class="fas fa-tint"></i>
-        <h3>Kyogre :</h3>
+        <h3>Kyogre : 10</h3>
+        <i class="fas fa-heart"></i>
       </div>
       <a href="" id="reset" class="myButton"
         >Play again !
@@ -79,5 +101,6 @@
       <img src="./img/groudon.png" alt="image d'un pokemon" />
     </figure>
     <script src="app.js"></script>
+    <!-- <script src="./js2/app2.mjs"></script> -->
   </body>
 </html>
