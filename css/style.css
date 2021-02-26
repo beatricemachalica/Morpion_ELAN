@@ -193,7 +193,7 @@ td:hover {
   background: rgb(243, 156, 156);
 }
 /* Hit blink effect */
-@-webkit-keyframes blinker {
+/* @-webkit-keyframes blinker {
   from {
     opacity: 1;
   }
@@ -208,7 +208,7 @@ td:hover {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-direction: alternate;
-}
+} */
 
 /* play again button */
 .myButton {
