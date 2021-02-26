@@ -35,7 +35,7 @@ let counterVictory = 0;
 let msg = document.getElementById("message");
 msg.innerHTML = "Let's battle !";
 
-// Array cells
+// Cells' array
 let cells = document.getElementsByTagName("td");
 let state = [];
 
