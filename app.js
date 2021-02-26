@@ -1,3 +1,7 @@
+// TIC TAC TOE GAME
+const player1 = "<i class='fas fa-tint'></i>"; //symbole kyogre
+const player2 = "<i class='fas fa-fire-alt'></i>"; //symbole groudon
+
 // hide select-box and show playboard
 const selectBox = document.querySelector(".select-box"),
   selectKyogre = selectBox.querySelector(".kyogrePlayer"),
@@ -21,9 +25,6 @@ window.onload = () => {
   };
 };
 
-// TIC TAC TOE GAME
-const player1 = "<i class='fas fa-tint'></i>";
-const player2 = "<i class='fas fa-fire-alt'></i>";
 let currentPlayer = player1;
 let victory = false;
 let counter = 0;
@@ -113,18 +114,13 @@ for (let i = 0; i < cells.length; i++) {
           currentPlayer === player1
             ? (msg.innerHTML = "Kyogre wins !")
             : (msg.innerHTML = "Groudon wins !");
-        counterParty++;
-        counterVictory++;
       } else if (counter === 9 && victory === false) {
         msg.innerHTML = "Draw !";
-        counterParty++;
       } else {
         // players switch ternary condition
         currentPlayer = currentPlayer === player1 ? player2 : player1;
         msg.innerHTML = "It's " + currentPlayer + "'s turn";
       }
-      console.log(counterVictory);
-      console.log(counterParty);
     }
   });
 }
@@ -137,10 +133,8 @@ const reset = () => {
     cell.innerHTML = "";
   }
 };
-
 document.querySelector("#reset").addEventListener("click", function (event) {
   event.preventDefault(); //block the reload event of the empty href
   counter = 0;
   reset();
 });
-// stop la vidéo à 33min47s
