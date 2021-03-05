@@ -2,7 +2,7 @@
 const player1 = "<i class='fas fa-tint'></i>"; //symbole kyogre
 const player2 = "<i class='fas fa-fire-alt'></i>"; //symbole groudon
 
-let currentPlayer = player1;
+let currentPlayer = "";
 let victory = false;
 let counter = 0;
 let counterParty = 0;
@@ -25,6 +25,7 @@ window.onload = () => {
     var audioK = document.getElementById("audioKyogre");
     audioK.volume = 0.2;
     audioK.play();
+    currentPlayer = player1;
   };
   selectGroudon.onclick = () => {
     selectBox.classList.add("hide");
@@ -34,6 +35,7 @@ window.onload = () => {
     var audioG = document.getElementById("audioGroudon");
     audioG.volume = 0.2;
     audioG.play();
+    currentPlayer = player2;
   };
 };
 
@@ -43,10 +45,10 @@ msg.innerHTML = "Let's battle !";
 
 // Groudon score
 let scoreG = document.getElementById("pointScoreGroudon");
-scoreG.innerHTML = 10;
+scoreG.innerHTML = 0;
 // Groudon score
 let scoreK = document.getElementById("pointScoreKyogre");
-scoreK.innerHTML = 10;
+scoreK.innerHTML = 0;
 
 // Hit sound
 var audioHit = document.getElementById("audioHit");
@@ -128,11 +130,11 @@ for (let i = 0; i < cells.length; i++) {
       if (victory === true) {
         if (currentPlayer === player1) {
           msg.innerHTML = "Kyogre has won this turn !";
-          scoreG.innerHTML--;
+          scoreK.innerHTML++;
           // hitEffect();
         } else {
           msg.innerHTML = "Groudon has won this turn !";
-          scoreK.innerHTML--;
+          scoreG.innerHTML++;
           // hitEffect();
         }
       } else if (counter === 9 && victory === false) {
@@ -146,6 +148,7 @@ for (let i = 0; i < cells.length; i++) {
   });
 }
 
+// add scoreG.innerHTML--; before
 // function hitEffect() {
 //   audioHit.volume = 0.1;
 //   audioHit.play();
@@ -160,8 +163,7 @@ const reset = () => {
   victory = false;
   state = [];
   msg.innerHTML = "Let's battle !";
-  // revoir cette ligne avec la sélection du pokemon !!!
-  currentPlayer = player1;
+  currentPlayer = currentPlayer === player1 ? player2 : player1;
   for (let cell of cells) {
     cell.innerHTML = "";
   }

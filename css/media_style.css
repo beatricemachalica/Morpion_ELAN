@@ -1,11 +1,33 @@
-@media screen and (max-device-width: 300px) {
+@media screen and (max-device-width: 355px) {
   body {
     background-image: none;
     background: rgb(90, 171, 238);
   }
+  .music {
+    display: none;
+  }
+  .select-box {
+    width: 90%;
+  }
+  .options .kyogrePlayer {
+    background: rgba(36, 87, 255, 0.8);
+    color: white;
+    border: 3px solid rgb(9, 17, 134);
+  }
+  .options .groudonPlayer {
+    background: rgba(255, 39, 39, 0.8);
+    border: 3px solid rgb(141, 9, 9);
+    color: white;
+  }
+  .kyogreScore,
+  .groudonScore,
+  .pokemon1,
+  .pokemon2 {
+    display: none;
+  }
   h1 {
     font-size: 1.4rem;
-    margin: 20px;
+    margin: 5px;
   }
   .instructions {
     display: none;
@@ -32,15 +54,43 @@
     width: 70%;
     margin-top: 20px;
   }
+  .show {
+    transform: translate(0%, -69%) scale(0.9);
+  }
 }
 @media screen and (max-device-width: 600px) {
   body {
     background-image: none;
     background: rgb(90, 171, 238);
   }
+  .music {
+    display: none;
+  }
+  .select-box {
+    width: 90%;
+  }
+  .show {
+    transform: translate(0%, -52%) scale(1);
+  }
+  .options .kyogrePlayer {
+    background: rgba(36, 87, 255, 0.8);
+    color: white;
+    border: 3px solid rgb(9, 17, 134);
+  }
+  .options .groudonPlayer {
+    background: rgba(255, 39, 39, 0.8);
+    border: 3px solid rgb(141, 9, 9);
+    color: white;
+  }
+  .kyogreScore,
+  .groudonScore,
+  .pokemon1,
+  .pokemon2 {
+    display: none;
+  }
   h1 {
     font-size: 1.7rem;
-    margin: 20px;
+    margin: 5px;
   }
   .instructions {
     display: none;
@@ -72,6 +122,28 @@
   body {
     background-image: none;
     background: rgb(90, 171, 238);
+  }
+  .music {
+    display: none;
+  }
+  .select-box {
+    width: 90%;
+  }
+  .options .kyogrePlayer {
+    background: rgba(36, 87, 255, 0.8);
+    color: white;
+    border: 3px solid rgb(9, 17, 134);
+  }
+  .options .groudonPlayer {
+    background: rgba(255, 39, 39, 0.8);
+    border: 3px solid rgb(141, 9, 9);
+    color: white;
+  }
+  .kyogreScore,
+  .groudonScore,
+  .pokemon1,
+  .pokemon2 {
+    display: none;
   }
   .messageContainer {
     color: rgb(54, 54, 54);
