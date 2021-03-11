@@ -17,7 +17,7 @@ body {
   max-width: 100vw;
   max-height: 100vh;
 }
-/* music */
+/* music controler */
 .music {
   opacity: 0.7;
 }
@@ -30,7 +30,7 @@ h1 {
   text-align: center;
   margin-bottom: 45px;
 }
-/* Select box - two pokemon */
+/* Select box - Kyogre or Groudon */
 .select-box {
   margin: auto;
   margin-top: 75px;
@@ -89,6 +89,7 @@ h1 {
   transform: translate(0%, -40%) scale(1);
   cursor: initial;
 }
+/* Kyogre position */
 .pokemon1 {
   width: 30%;
   opacity: 0;
@@ -97,6 +98,7 @@ h1 {
   cursor: none;
   transition: all 0.9s ease-out;
 }
+/* Groudon position */
 .pokemon2 {
   width: 35%;
   opacity: 0;
@@ -189,6 +191,9 @@ td {
 td:hover {
   background: rgb(243, 156, 156);
 }
+
+/* work in progress */
+
 /* Hit blink effect */
 /* @-webkit-keyframes blinker {
   from {
@@ -241,10 +246,13 @@ td:hover {
 .pokeball {
   width: 20%;
 }
+
+/* Groudon Symbol */
 .fa-fire-alt {
   color: rgb(194, 46, 46);
   opacity: 1;
 }
+/* Kyogre Symbol */
 .fa-tint {
   color: rgb(44, 41, 211);
   opacity: 1;

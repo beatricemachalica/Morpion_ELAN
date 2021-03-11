@@ -1,6 +1,6 @@
 // TIC TAC TOE GAME
-const player1 = "<i class='fas fa-tint'></i>"; //symbole kyogre
-const player2 = "<i class='fas fa-fire-alt'></i>"; //symbole groudon
+const player1 = "<i class='fas fa-tint'></i>"; // Kyogre symbol
+const player2 = "<i class='fas fa-fire-alt'></i>"; // Groudon symbol
 
 let currentPlayer = "";
 let victory = false;
@@ -16,6 +16,7 @@ const selectBox = document.querySelector(".select-box"),
   pokemon1 = document.querySelector(".pokemon1"),
   pokemon2 = document.querySelector(".pokemon2");
 
+// on click -> hide select-box + show & play the sound of the chosen pokemon
 window.onload = () => {
   selectKyogre.onclick = () => {
     selectBox.classList.add("hide");
@@ -50,8 +51,9 @@ scoreG.innerHTML = 0;
 let scoreK = document.getElementById("pointScoreKyogre");
 scoreK.innerHTML = 0;
 
+// work in progress
 // Hit sound
-var audioHit = document.getElementById("audioHit");
+// var audioHit = document.getElementById("audioHit");
 
 // Cells' array
 let cells = document.getElementsByTagName("td");
@@ -65,6 +67,7 @@ for (let i = 0; i < cells.length; i++) {
       cell.innerHTML = currentPlayer;
       state[i] = currentPlayer;
 
+      // victory conditions bellow
       if (counter >= 5) {
         // line
         if (
@@ -147,6 +150,8 @@ for (let i = 0; i < cells.length; i++) {
     }
   });
 }
+
+// work in progress
 
 // add scoreG.innerHTML--; before
 // function hitEffect() {

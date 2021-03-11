@@ -1,3 +1,4 @@
+/* very small devices */
 @media screen and (max-device-width: 355px) {
   body {
     background-image: none;
@@ -58,6 +59,7 @@
     transform: translate(0%, -69%) scale(0.9);
   }
 }
+/* small devices */
 @media screen and (max-device-width: 600px) {
   body {
     background-image: none;
@@ -118,6 +120,7 @@
     margin-top: 20px;
   }
 }
+/* style for ipad and so on */
 @media screen and (min-device-width: 768px) and (max-device-width: 1023px) {
   body {
     background-image: none;
